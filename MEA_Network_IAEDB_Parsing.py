@@ -51,14 +51,14 @@ df_all = pd.concat(df_all)
 print("DONE")
 
 
-# In[90]:
+# In[93]:
 
 
 # Keep a copy (just in case)
 df_all_copy = df_all
 
 
-# In[91]:
+# In[94]:
 
 
 # Delete blank cells 
@@ -72,7 +72,7 @@ df_all = df_all[df_all['Membership Status'] != 0]
 df_all= df_all.sort_values(by=['Country', 'Year', 'iea', 'Membership Status'])
 
 
-# In[92]:
+# In[95]:
 
 
 # Merging 
@@ -83,8 +83,12 @@ df_merged = reduce(lambda  left, right: pd.merge(left,right,on=['iea'],
 # Deleted observations that are only in the iea_meta 
 df_merged = df_merged [df_merged ['Country'] != "0"]
 
+# Sort and clean 
+df_merged = df_merged.drop(columns=['Inclusion', 'Signature Year', 'Signature Date', 'Treaty Text', 'Members', 'Data'])
+df_merged = df_merged.sort_values(by=['Country', 'Year', 'iea', 'Membership Status'])
+
 # Export
-df_merged.to_csv('iea_list_out.csv')
+df_merged.to_csv('MEA_List.csv')
 
 
 # #### Done!
