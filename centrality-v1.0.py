@@ -354,8 +354,6 @@ ctrlity_merged.to_csv("/content/drive/MyDrive/G11-MEA-Diffusion/dataMEA_Ctrlity/
 #eigenvector centrality
 
 ee, x = gt.eigenvector(gt_2018_univ)
-#x.a /= x.a.max() / 5
-#x.a = (x.a + 4.3)**2.8
 x.a /= (x.a*10 - 0.7)/0.04 # follow the formula in the book 
 gt.graph_draw(gt_2018_univ, vertex_fill_color=x, vcmap=matplotlib.cm.gist_earth, vorder=x) #
 
@@ -367,7 +365,6 @@ gt.graph_draw(gc, vertex_fill_color=c, vcmap=matplotlib.cm.Oranges, vorder=c)
 #betweenness centrality 
 
 bv, be = betweenness(gt_2018_univ)
-be.a /= be.a.max() / 5 - 132
 graph_draw(gt_2018_univ, pos=None, vertex_fill_color=bv, vcmap=matplotlib.cm.summer)
 
 deg = gt_2018_univ.degree_property_map("total")
