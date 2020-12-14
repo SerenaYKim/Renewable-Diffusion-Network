@@ -20,7 +20,7 @@ import os
 from functools import reduce
 
 
-# ### Parsing Data from International Environmental Agreement Database (IAEDB)
+# ### Parsing Data from International Environmental Agreement Database (IEADB)
 
 # In[80]:
 
