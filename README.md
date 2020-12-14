@@ -1,2 +1,2 @@
-# MEA_Network
-Network Analysis of Multilateral Environmental Agreements and Global Diffusion of Renewable Energy Policy
+# Renewable-Diffusion-Network
+Network Analysis of International Environmental Agreements and Global Diffusion of Renewable Energy Policy
